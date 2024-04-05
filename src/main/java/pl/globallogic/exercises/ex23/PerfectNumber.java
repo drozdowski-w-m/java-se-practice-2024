@@ -17,6 +17,7 @@ public class PerfectNumber {
             return false;
     }
     public static void main(String[] args){
+//tests
         System.out.println(isPerfectNumber(6));
         System.out.println(isPerfectNumber(28));
         System.out.println(isPerfectNumber(5));
