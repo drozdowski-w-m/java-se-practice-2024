@@ -1,7 +1,7 @@
 package pl.globallogic.exercises.ex40;
 
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Hamburger hamburger = new Hamburger("Basic", "Sausage", "White", 3.56);
         hamburger.addHamburgerAddition1("Tomato", 0.27);
         hamburger.addHamburgerAddition2("Lettuce", 0.75);
@@ -17,5 +17,6 @@ public class Main {
         DeluxeBurger db = new DeluxeBurger();
         db.addHamburgerAddition3("Should not do this", 50.53);
         System.out.printf("Total Deluxe Burger price is %.2f", db.itemizeHamburger());
+
     }
 }
