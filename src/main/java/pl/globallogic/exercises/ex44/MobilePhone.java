@@ -68,40 +68,8 @@ public class MobilePhone {
         }
     }
 
-    public class Contact {
-        private String name, phoneNumber;
 
-        public Contact(String name, String phoneNumber){
-            this.name = name;
-            this.phoneNumber = phoneNumber;
-        }
 
-        public String getName() {
-            return name;
-        }
 
-        public String getPhoneNumber() {
-            return phoneNumber;
-        }
-        public static Contact createContact(String name, String phoneNumber){
-            return new Contact(name, phoneNumber);
-        }
-    }
 
-    public static void main(String[] args) {
-//tests
-        MobilePhone phone = new MobilePhone("1234567890");
-
-        Contact bob = Contact.createContact("Bob", "111111");
-        Contact alice = Contact.createContact("Alice", "222222");
-        Contact tom = Contact.createContact("Tom", "333333");
-        Contact jane = Contact.createContact("Jane","444444");
-
-        phone.addNewContact(bob);
-        phone.addNewContact(alice);
-        phone.addNewContact(tom);
-        phone.addNewContact(jane);
-
-        phone.printContacts();
-    }
 }
