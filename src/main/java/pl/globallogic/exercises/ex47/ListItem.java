@@ -2,9 +2,9 @@ package pl.globallogic.exercises.ex47;
 
 abstract class ListItem {
     protected ListItem rightLink, leftLink;
-    protected Object value;
+    protected Integer value;
 
-    ListItem(Object value){
+    ListItem(Integer value){
         this.value = value;
     }
 
@@ -14,11 +14,11 @@ abstract class ListItem {
     abstract ListItem setPrevious(ListItem listItem);
     abstract int compareTo(ListItem listItem);
 
-    Object getValue(){
+    public Integer getValue(){
         return value;
     }
 
-    void setValue(Object value){
+    public void setValue(Integer value){
         this.value = value;
     }
 

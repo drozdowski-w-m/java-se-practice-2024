@@ -1,29 +1,34 @@
 package pl.globallogic.exercises.ex47;
 
 public class Node extends ListItem{
-    public Node(Object value){
+    public Node(Integer value){
         super(value);
     }
 
     @Override
     ListItem next(){
-        return rightLink;
+        return this.rightLink;
     }
     @Override
     ListItem setNext(ListItem listItem){
-        return rightLink = listItem;
+        this.rightLink = listItem;
+        return this.rightLink;
     }
     @Override
     ListItem previous(){
-        return leftLink;
+        return this.leftLink;
     }
     @Override
     ListItem setPrevious(ListItem listItem){
-        return leftLink = listItem;
+        this.leftLink = listItem;
+        return this.leftLink;
     }
     @Override
     int compareTo(ListItem listItem){
-        Object otherValue = listItem.getValue();
-        return 0;
+        if (listItem != null){
+            return this.value.compareTo(listItem.getValue());
+        } else {
+            return -1;
+        }
     }
 }
