@@ -3,6 +3,7 @@ package pl.globallogic.sessions.session4.BirthdayService;
 import java.time.LocalDate;
 import java.time.Month;
 import java.time.Period;
+import java.time.temporal.ChronoUnit;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
@@ -39,9 +40,10 @@ public class BirthdayManagementService {
         return period.getYears();
     }
 
-    public int getDaysUntilBirthday(String fullName) {
-        //TODO: fix issue with wrong date calculation
-        return Period.between(getBirthdayFor(fullName).get(), LocalDate.now()).getDays();
+    public long getDaysUntilBirthday(String fullName) {
+
+        //return Period.between(getBirthdayFor(fullName).get(), LocalDate.now()).getDays();
+        return ChronoUnit.DAYS.between(LocalDate.now(), getBirthdayFor(fullName).get().withYear(LocalDate.now().getYear()));
     }
 
 
